@@ -2,6 +2,10 @@
 
 API para gerenciamento de Posts
 
+# Documentação
+
+A documentação para uso desta API se encontra no arquivo DOC.md
+
 ## Como desenvolver?
 
 1. Clone do  repositório.
