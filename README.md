@@ -2,7 +2,7 @@
 
 API para gerenciamento de Posts
 
-# Documentação
+## Documentação
 
 A documentação para uso desta API se encontra no arquivo DOC.md
 
