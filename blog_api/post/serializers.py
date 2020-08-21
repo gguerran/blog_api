@@ -5,14 +5,11 @@ from rest_framework import serializers
 from blog_api.post.models import Post
 
 class PostSerializer(serializers.ModelSerializer):
-    """
-    Browser serializer
-    """
+    """ Browser serializer """
     class Meta:
-        """
-        Serializer meta class
-            Defines the model of the serializer, the ordering of the list of
-            browsers and the fields to be listed.
+        """ Serializer meta class
+        Defines the model of the serializer, the ordering of the list of
+        browsers and the fields to be listed.
         """
         model = Post
         ordering = ['created_at']

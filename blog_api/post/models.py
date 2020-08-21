@@ -3,9 +3,7 @@ from django.db import models
 
 
 class Post(models.Model):
-    """
-    Model Post.
-    """
+    """ Model Post. """
     title = models.CharField(verbose_name='título', max_length=100)
     description = models.TextField(verbose_name='descrição')
     image_url = models.URLField()
@@ -21,8 +19,7 @@ class Post(models.Model):
     )
 
     class Meta:
-        """
-        Meta model class
+        """ Meta model class
         Defines the displayed singular and plural name of the model
         """
         verbose_name = "post"

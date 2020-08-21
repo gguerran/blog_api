@@ -6,9 +6,7 @@ from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 
 
 class UserManager(BaseUserManager):
-    """
-    User management class
-    """
+    """ User management class """
     use_in_migrations = True
 
     def _create_user(self, email, password, **extra_fields):
@@ -25,9 +23,9 @@ class UserManager(BaseUserManager):
         """ Create and save the user with the email and password. """
         return self._create_user(email, password, **extra_fields)
 
+
 class User(AbstractBaseUser, PermissionsMixin):
-    """
-    Custom user model so that only email and password are used as required
+    """ Custom user model so that only email and password are used as required
     fields
     """
     email = models.EmailField('e-mail', unique=True)
@@ -35,12 +33,10 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField('staff', default=True, blank=True)
     objects = UserManager()
 
-    # Setting username as email
     USERNAME_FIELD = 'email'
 
     class Meta:
-        """
-        Model Meta class
+        """ Model Meta class
         Defines the displayed singular and plural name of the model
         """
         verbose_name = 'Usuário'

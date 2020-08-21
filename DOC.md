@@ -3,10 +3,10 @@
 
 OBS.:
 	Através do software Insomnia, o arquivo `blog_api_requests.json` pode ser importado e o ambiente
-	para testes estará configurado, de forma que todas as rotas da API estarão disponíveis.
-	Para as rotas que não são de autenticação, o token de acesso está pré-configurado nas preferências do ambiente,
+	para testes estará configurado, tanto para desenvolvimento quanto para o Heroku, de forma que todas as rotas da API estarão disponíveis.
+	Para as rotas que não são de autenticação, o token de acesso está pré-configurado nas preferências dos ambientes,
 	de forma que ele atualiza sempre com a rota de login.
-	Nas preferências do ambiente também está configurada a base URL para ser usada em todas as rotas, e caso necessário,
+	Nas preferências dos ambientes também estão configurada a base URL para ser usada em todas as rotas, e caso necessário,
 	alterá-la, automaticamente configura todo o ambiente
 
 **Signup**

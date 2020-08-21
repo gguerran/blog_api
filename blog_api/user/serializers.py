@@ -6,12 +6,9 @@ from blog_api.user.models import User
 
 
 class CreateUserSerializer(serializers.ModelSerializer):
-    """
-    User serializer
-    """
+    """ User serializer """
     class Meta:
-        """
-        Serializer meta class
+        """ Serializer meta class
         Defines the model of the serializer and the fields to be used.
         """
         model = User
@@ -19,9 +16,7 @@ class CreateUserSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         """ User creation function. """
-        user = User(
-            email=validated_data['email'],
-        )
+        user = User(email=validated_data['email'])
         user.set_password(validated_data['password'])
         user.is_active = True
         user.save()
