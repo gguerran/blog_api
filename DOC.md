@@ -6,7 +6,7 @@ OBS.:
 	para testes estará configurado, tanto para desenvolvimento quanto para o Heroku, de forma que todas as rotas da API estarão disponíveis.
 	Para as rotas que não são de autenticação, o token de acesso está pré-configurado nas preferências dos ambientes,
 	de forma que ele atualiza sempre com a rota de login.
-	Nas preferências dos ambientes também estão configurada a base URL para ser usada em todas as rotas, e caso necessário,
+	Nas preferências dos ambientes também está configurada a base URL para ser usada em todas as rotas, e caso necessário,
 	alterá-la, automaticamente configura todo o ambiente
 
 **Signup**
