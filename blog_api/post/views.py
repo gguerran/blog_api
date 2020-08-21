@@ -1,7 +1,6 @@
 # DRF imports
-from rest_framework import status, viewsets
+from rest_framework import viewsets
 from rest_framework import permissions
-from rest_framework.response import Response
 
 # App imports
 from blog_api.post.models import  Post

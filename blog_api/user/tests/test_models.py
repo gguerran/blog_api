@@ -1,6 +1,3 @@
-# Python imports
-from model_mommy import mommy
-
 # Django imports
 from django.test import TestCase
 
@@ -13,9 +10,7 @@ class UserTest(TestCase):
 
     def setUp(self):
         """ Test class settings """
-        self.user = User.objects.create(
-            email='test@test.com', password="1234"
-            )
+        self.user = User.objects.create(email='test@test.com', password="1234")
 
     def test_create(self):
         """ Post creation test """

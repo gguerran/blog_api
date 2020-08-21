@@ -1,6 +1,6 @@
 # DRF imports
 from rest_framework import generics
-from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.permissions import AllowAny
 
 # App imports
 from blog_api.user.serializers import CreateUserSerializer

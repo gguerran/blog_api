@@ -1,14 +1,9 @@
-# Python imports
-import json
-from model_mommy import mommy
-
 # DRF imports
 from rest_framework import status
 from rest_framework.test import force_authenticate, APIRequestFactory
 
 # Django imports
-from django.test import TestCase, Client
-from django.urls import reverse
+from django.test import TestCase
 
 # App imports
 from blog_api.user.models import User
