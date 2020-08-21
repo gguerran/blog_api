@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'ohvgwwli(^sce@$rvcpdt=9^hf!_v8&1t8j+yb7gv=t(xsxaii'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1',
                  'gguerra-api.herokuapp.com']
