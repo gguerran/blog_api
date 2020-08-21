@@ -15,7 +15,7 @@ import django_heroku
 import os
 import dj_database_url
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'ohvgwwli(^sce@$rvcpdt=9^hf!_v8&1t8j+yb7gv=t(xsxaii'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -101,13 +101,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'blog_db',
         'USER': 'blog_user',
-        'PASSWORD': 'TQd03YI2z^YF',
+        'PASSWORD': 'mypass',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
+
 db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
