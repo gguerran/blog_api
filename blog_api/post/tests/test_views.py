@@ -28,23 +28,27 @@ class PostViewsTest(TestCase):
             email='test@test.com', password='testword'
         )
         self.user.is_active = True
+        self.user.save()
         self.post1 = Post.objects.create(
             title='Post 1', description="testetgvsbdfkvnrv",
             image_url = "https://google.com",
             created_by=self.user
         )
+        self.post1.save()
 
         self.post2 = Post.objects.create(
             title='Post 2', description="testetgvsbdfkvnrv",
             image_url = "https://google.com",
             created_by=self.user
         )
+        self.post2.save()
 
         self.post3 = Post.objects.create(
             title='Post 3', description="testetgvsbdfkvnrv",
             image_url = "https://google.com",
             created_by=self.user
         )
+        self.post3.save()
     
     def test_create(self):
         """ Test creating objects by route """
@@ -75,8 +79,8 @@ class PostViewsTest(TestCase):
         request = factory.get('/post/',)
         force_authenticate(request, user=self.user)
         view = PostViewSet.as_view({'get': 'retrieve'})
-        response = view(request, pk=1)
-        post = Post.objects.get(pk=1)
+        response = view(request, pk=self.post1.pk)
+        post = Post.objects.get(pk=self.post1.pk)
         serializer = PostSerializer(post)
         self.assertEqual(response.data, serializer.data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -102,7 +106,7 @@ class PostViewsTest(TestCase):
         request = factory.post('/post/', data)
         force_authenticate(request, user=self.user)
         view = PostViewSet.as_view({'post':'update'})
-        response = view(request, pk=1)
+        response = view(request, pk=self.post2.pk)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_delete(self):
@@ -110,5 +114,5 @@ class PostViewsTest(TestCase):
         request = factory.delete('/post/')
         force_authenticate(request, user=self.user)
         view = PostViewSet.as_view({"delete": "destroy"})
-        response = view(request, pk=1)
+        response = view(request, pk=self.post3.pk)
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
