@@ -18,7 +18,10 @@ cd blog_api
 python3 -m venv .env
 source .env/bin/activate
 pip install -r requirements.txt
-python manage.py test
+sudo su - postgres
+createdb blog_db
+#CREATE USER blog_user WITH PASSWORD 'TQd03YI2z^YF';
+exit
 python manage.py migrate
 python manage.py runserver
 ```
