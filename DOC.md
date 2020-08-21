@@ -298,5 +298,4 @@ OBS.:
   OU
 
   * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `
-    `{ error :{"detail": "Authentication credentials were not provided."}}`
+    **Content:** `{ error :{"detail": "Authentication credentials were not provided."}}`
